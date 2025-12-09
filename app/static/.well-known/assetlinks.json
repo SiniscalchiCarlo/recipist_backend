@@ -1,0 +1,16 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.smartShoppingList.app",
+      "sha256_cert_fingerprints": [
+        "7D:23:47:58:1B:03:86:60:DE:36:D9:8B:B8:AB:5E:AC:FA:3F:19:2F:DA:2B:F8:46:D5:82:F4:AF:0C:45:A4:FA",
+        "71:C7:49:2F:05:6F:AB:6D:46:F7:C2:DE:1D:A6:9C:A9:CD:BE:68:DC:2E:F9:86:05:04:97:04:11:43:B3:58:E1",
+        "53:C7:7A:7D:51:D0:35:A5:47:98:DD:AB:7C:75:D2:C4:50:4F:63:1C:6F:78:FA:02:EF:DC:1B:2F:FA:E3:F5:6C"
+      ]
+    }
+  }
+]
+
+
