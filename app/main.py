@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from app.api.recipes import router as recipes_router
 
@@ -22,7 +23,16 @@ async def root():
 async def get_list(listId: str):
     return {"message": f"Received listId: {listId}"}
 
-@app.get("/recipe")
-async def get_recipe(recipeId: str):
-    return {"message": f"Received recipeId: {recipeId}"}
-
+@app.get("/recipe", response_class=HTMLResponse)
+async def open_recipe(recipeId: str):
+    return f"""
+    <html>
+      <body>
+        <script>
+          window.location.href =
+            "intent://recipe?recipeId={recipeId}"
+            + "#Intent;scheme=https;package=com.smartShoppingList.app;end";
+        </script>
+      </body>
+    </html>
+    """
